@@ -6,6 +6,11 @@
 
 //把common.php文件包含进来
 include 'commo.php';
+include 'checklogin.php';
+echo "<pre>";
+var_dump($_SESSION);
+var_dump($_COOKIE);
+echo "</pre>";
 //总记录数
 $total=$pdo->query("select * from member")->rowCount();
 //echo $total;

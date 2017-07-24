@@ -3,6 +3,7 @@
 *作者:张三,邮箱:zhangsan@zhang.com
 */
 include 'commo.php';
+include 'checklogin.php';
 //如果没有id传递,跳转到首页
 if($_GET['id']){
 	$sql="select * from member where id=".$_GET['id'];

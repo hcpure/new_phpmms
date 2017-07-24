@@ -3,6 +3,7 @@
 *作者:张三,邮箱:zhangsan@zhang.com
 */
 include 'commo.php';
+include 'checklogin.php';
 //如果id为真
 if($_GET['id']){
 	$sql="delete from member where id=".$_GET['id'];

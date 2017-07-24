@@ -3,6 +3,7 @@
 *作者:张三,邮箱:zhangsan@zhang.com
 */
 include 'commo.php';
+include 'checklogin.php';
 if($_POST['send']){
 	$searchSql="select * from member 
 				where username='".$_POST['username']."'";

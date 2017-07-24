@@ -21,4 +21,5 @@ try{		//尝试执行指定的代码,如果出错catch抛出错误
 }
 //设置操作数据库的字符集
 $pdo->query("set names utf8");
+
 ?>
