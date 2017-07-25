@@ -4,11 +4,11 @@
 */
 include "commo.php";
 //如果cookie有效,就跳转到首页,无需登录,无效就重新登录
-/* if($_COOKIE['username']){
+ if($_COOKIE['username']){
 	//把cookie值保存到session中
 	$_SESSION['admin']=$_COOKIE['username'];
 	header("location:getAll.php");
-} */
+} 
 //点击登录
 if($_POST['send']){
 	//判断验证码
@@ -25,11 +25,11 @@ if($_POST['send']){
 		//一周内不用登录
 		if($_POST['oneweek']=="1"){
 			setcookie("username",$_POST['username'],time()+3600*24*7);
-			header("location:getAll.php?oneweek=1");
+			
 		}else{
 			setcookie("username",$_POST['username']);
 			//跳转到首页
-			header("location:getAll.php?oneweek=0");
+			header("location:getAll.php");
 		}
 		
 		//把用户对象保存到session中

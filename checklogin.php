@@ -20,7 +20,7 @@ if($_GET['action']=='logout'){
 	//销毁session值
 	unset($_SESSION['admin']);
 	//销毁cookie值
-	unset($_COOKIE['username']);
+	setcookie("username","");
 	header("location:login.php");
 }
 ?>
